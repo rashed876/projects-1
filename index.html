@@ -25,11 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="iphOne-decr" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="iphOne-count"  type="text" class="form-control text-center" value="1">
-                           <button id="iphOne-in" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick="handleProductChange(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="phone-count" type="text" class="form-control text-center" value="1">
+                           <button onclick="handleProductChange(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5 id="iphOne-total">$1219</h5>
+                        <h5 id="phone-total">$1219</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -43,9 +43,10 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="case-decr" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button onclick=" handleCaseChange(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="case-count" type="text" class="form-control text-center" value="1">
-                           <button id="case-increase" class="btn btn-default"><i class="fas fa-plus"></i></button>
+            
+                           <button onclick="handleCaseChange(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
                         <h5 id="case-total">$59</h5>
@@ -79,50 +80,54 @@
    </section>
 
    <script>
-         document.getElementById("case-increase").addEventListener('click',function(){
-            const caseInput = document.getElementById('case-count');
+
+         function handleProductChange(isIncrease){
+            const caseInput = document.getElementById('phone-count');
             const caseCount = parseInt(caseInput.value);
-            const caseNewCount = caseCount +1;
+         
+            let caseNewCount = caseCount;
+            if(isIncrease == true){
+               caseNewCount = caseCount + 1;
+            }
+            if(isIncrease == false && caseCount > 0){
+               caseNewCount = caseCount - 1;
+            }
+
             caseInput.value = caseNewCount;
-            const cadeTotal = caseNewCount*59;
-            document.getElementById('case-total').innerText = '$'+ cadeTotal;
-         })
-
-
-
-         document.getElementById("case-decr").addEventListener('click',function(){
-            const caseInput = document.getElementById('case-count');
-            const caseCount = parseInt(caseInput.value);
-            const caseNewCount = caseCount -1;
-            caseInput.value = caseNewCount;
-            const cadeTotal = caseNewCount*59;
-            document.getElementById('case-total').innerText = '$'+ cadeTotal;
-
-         })
-
-
-         document.getElementById("iphOne-in").addEventListener("click",function(){
-            const iphOneInput = document.getElementById("iphOne-count");
-            const iphOneCount = parseInt (iphOneInput.value);
-            const iphOneNewCount = iphOneCount +1;
-             iphOneInput.value = iphOneNewCount;
-             const iphOneTotal = iphOneNewCount *1219;
-             document.getElementById("iphOne-total").innerText = "$"+ iphOneTotal;
-         })
-
-
-
-         document.getElementById("iphOne-decr").addEventListener("click",function(){
-            const iphOneInput = document.getElementById("iphOne-count");
-            const iphOneCount = parseInt(iphOneInput.value);
-            const iphOneNewCount = iphOneCount -1;
-            iphOneInput.value = iphOneNewCount;
-            const iphOneTotal = iphOneNewCount*1219;
-            document.getElementById("iphOne-total").innerText = "$" + iphOneTotal;
-         })
-             
+            const cadeTotal = caseNewCount * 1219;
+            document.getElementById('phone-total').innerText = '$'+ cadeTotal;
+         }
 
             
+         
+         function handleCaseChange(isIncrease){
+            const caseInput = document.getElementById('case-count');
+            const caseCount = parseInt(caseInput.value);
+         
+            let caseNewCount = caseCount;
+            if(isIncrease == true){
+               caseNewCount = caseCount + 1;
+            }
+            if(isIncrease == false && caseCount > 0){
+               caseNewCount = caseCount - 1;
+            }
+
+            caseInput.value = caseNewCount;
+            const cadeTotal = caseNewCount * 59;
+            document.getElementById('case-total').innerText = '$'+ cadeTotal;
+         }
+
+
+
+
+
+        
+
+
+
+
+
+        
          
 
 
