@@ -53,56 +53,13 @@ body{
 	background-color: #2FBE70;
 	border: none;
 }
-
-/*   function handlePhoneChange(isIncrease){
-            const phoneInput = document.getElementById("phone-Count");
-            const phoneCount = parseInt(phoneInput.value);
-            let phoneNewCount = phoneCount;
-            if(isIncrease == true){
-               phoneNewCount = phoneCount + 1;
-            }
-            if(isIncrease == false && phoneCount > 0){
-               phoneNewCount = phoneCount - 1;
-            }
-            phoneInput.value = phoneNewCount;
-            const phoneTotal = phoneNewCount * 1219;
-            document.getElementById("phone-total").innerText = '$'+ phoneTotal;
-         } */
-
-
-/* case */
-
-
-
-/* const caseNewCount = caseCount -1; */
-
-/*
+ 
+   
+   
+   
+   
+   
+   
+   
+   
             
-            document.getElementById("iphOne-in").addEventListener("click",function(){
-               const iphOneInput = document.getElementById("iphOne-count");
-               const iphOneCount = parseInt (iphOneInput.value);
-               const iphOneNewCount = iphOneCount +1;
-                iphOneInput.value = iphOneNewCount;
-                const iphOneTotal = iphOneNewCount *1219;
-                document.getElementById("iphOne-total").innerText = "$"+ iphOneTotal;
-            })
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-            document.getElementById("iphOne-decr").addEventListener("click",function(){
-               const iphOneInput = document.getElementById("iphOne-count");
-               const iphOneCount = parseInt(iphOneInput.value);
-               const iphOneNewCount = iphOneCount -1;
-               iphOneInput.value = iphOneNewCount;
-               const iphOneTotal = iphOneNewCount*1219;
-               document.getElementById("iphOne-total").innerText = "$" + iphOneTotal;
-            })
-
-              */
